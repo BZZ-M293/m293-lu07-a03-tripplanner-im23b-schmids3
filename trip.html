@@ -9,6 +9,123 @@
 
 <h1>Reisebuchungs-Formular</h1>
 
+<form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
+
+  <fieldset>
+    <legend>Flug</legend>
+    <label for="flughafen">Abflughafen:</label><br>
+    <select id="flughafen" name="flughafen" required="">
+      <optgroup label="Schweiz">
+        <option value="zuerich">Zürich</option>
+        <option value="basel">Basel</option>
+        <option value="genf">Genf</option>
+      </optgroup>
+      <optgroup label="Deutschland">
+        <option value="frankfurt">Frankfurt</option>
+        <option value="muenchen">München</option>
+      </optgroup>
+      <optgroup label="Österreich">
+        <option value="wien">Wien</option>
+      </optgroup>
+      <optgroup label="Italien">
+        <option value="rom">Rom</option>
+      </optgroup>
+      <optgroup label="Frankreich">
+        <option value="paris">Paris</option>
+      </optgroup>
+    </select>
+    <br>
+
+    <label for="fluggesellschaft">Bevorzugte Fluggesellschaft:</label><br>
+    <select id="fluggesellschaft" name="fluggesellschaft">
+      <option value="lufthansa">Lufthansa</option>
+      <option value="swiss">Swiss</option>
+      <option value="austrian">Austrian Airlines</option>
+      <option value="airfrance">Air France</option>
+      <option value="alitalia">Alitalia</option>
+    </select>
+
+    <p>Weitere Dienstleistungen:</p>
+    <input id="checkin" name="weitere_dienstleistung" type="checkbox" value="checkin">
+    <label for="checkin">Priority-Check-In</label><br>
+    <input id="handgepack" name="weitere_dienstleistung" type="checkbox" value="handgepack">
+    <label for="handgepack">Zusätzliches Handgepäck</label><br>
+    <input id="notausgang" name="weitere_dienstleistung" type="checkbox" value="notausgang">
+    <label for="notausgang">Sitzplatz mit mehr Beinfreiheit</label><br>
+  </fieldset>
+  <br>
+
+  <fieldset>
+    <legend>Art der Unterkunft:</legend>
+    <input id="hotel" name="unterkunft" type="radio" value="hotel">
+    <label for="hotel">Hotel</label><br>
+    <input id="ferienwohnung" name="unterkunft" type="radio" value="ferienwohnung">
+    <label for="ferienwohnung">Ferienwohnung</label><br>
+    <input id="hostel" name="unterkunft" type="radio" value="hostel">
+    <label for="hostel">Hostel</label><br>
+  </fieldset>
+  <br>
+
+  <fieldset>
+    <legend>Zusätzliche Dienstleistungen:</legend>
+    <input id="versicherung" name="dienstleistung" type="checkbox" value="versicherung">
+    <label for="versicherung">Reiseversicherung</label><br>
+    <input id="transfer" name="dienstleistung" type="checkbox" value="transfer">
+    <label for="transfer">Flughafentransfer</label><br>
+    <input id="gepack" name="dienstleistung" type="checkbox" value="gepack">
+    <label for="gepack">Zusätzliches Gepäck</label><br>
+  </fieldset>
+  <br>
+
+  <fieldset>
+    <legend>Reisedauer:</legend>
+    <label for="startdatum">Reisebeginn:</label><br>
+    <input id="startdatum" name="startdatum" required="" type="date"><br>
+    <label for="enddatum">Reiseende:</label><br>
+    <input id="enddatum" name="enddatum" required="" type="date"><br>
+    <label for="reisedauer">Reisedauer (in Tagen):</label><br>
+    <input id="reisedauer" max="21" min="1" name="reisedauer" required="" type="number"><br>
+  </fieldset>
+  <br>
+
+  <fieldset>
+    <legend>Anzahl der reisenden Personen:</legend>
+    <label for="personen"></label>
+    <input id="personen" name="personen" required="" type="number"><br>
+  </fieldset>
+  <br>
+
+  <fieldset>
+    <legend>Reiseziel</legend>
+    <label for="reiseziel"></label>
+    <input id="reiseziel" list="ziele" name="reiseziel">
+    <datalist id="ziele">
+      <option value="London">
+      </option>
+      <option value="Paris">
+      </option>
+      <option value="Rom">
+      </option>
+      <option value="Berlin">
+      </option>
+      <option value="Wien">
+      </option>
+    </datalist>
+  </fieldset>
+  <br>
+
+  <fieldset>
+    <legend>Kontakt</legend>
+    <label for="email">Ihre E-Mail-Adresse:</label><br>
+    <input id="email" name="email" required="" type="email">
+  </fieldset>
+  <br>
+
+  <input type="reset" value="Eingaben zurücksetzen">
+
+  <input type="submit" value="Buchung abschicken"><br>
+
+</form>
 
 </body>
 </html>
